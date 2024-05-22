@@ -7,7 +7,6 @@ typedef struct s_test {
     char dest[100];
     char src[100];
     size_t n;
-    char expected[100];
 } t_test;
 
 int run_tests(t_test *tests, int count);
@@ -19,43 +18,37 @@ int main(void)
             .desc = "ft_memcpy - copy empty string",
             .dest = "original",
             .src = "",
-            .n = 0,
-            .expected = "original"
+            .n = 0
         },
         {
             .desc = "ft_memcpy - copy string of length 1",
             .dest = "original",
             .src = "A",
-            .n = 1,
-            .expected = "original"
+            .n = 1
         },
         {
             .desc = "ft_memcpy - copy string of length 4",
             .dest = "original",
             .src = "test",
-            .n = 4,
-            .expected = "original"
+            .n = 4
         },
         {
             .desc = "ft_memcpy - copy string of length 9",
             .dest = "original",
             .src = "complete",
-            .n = 9,
-            .expected = "original"
+            .n = 9
         },
 		{
             .desc = "ft_memcpy - overlapping regions dest < src",
             .dest = "1234567890",
             .src = "234567890",
-            .n = 5,
-            .expected = "1234567890"
+            .n = 5
         },
         {
             .desc = "ft_memcpy - overlapping regions dest > src",
             .dest = "234567890",
             .src = "1234567890",
-            .n = 5,
-            .expected = "234567890"
+            .n = 5
         }
     };
         int count = sizeof(tests) / sizeof(tests[0]);
@@ -68,17 +61,19 @@ int run_tests(t_test *tests, int count)
         int i;
         int error = 0;
 		char *ft_result;
+		char expected_dest[100];
 		char *expected;
 
         for (i = 0; i < count; i++)
         {
-            ft_result = ft_memcpy(tests[i].dest, tests[i].src, tests[i].n);
-			expected = memcpy(tests[i].expected, tests[i].src, tests[i].n);
+            strcpy(expected_dest, tests[i].dest);
+			ft_result = ft_memmove(tests[i].dest, tests[i].src, tests[i].n);
+			expected = memmove(expected_dest, tests[i].src, tests[i].n);
 
         	// Check that the output matches the expected value
         	if (strcmp(ft_result, expected) != 0)
             {
-                printf("    " RED "[%d] %s Expected \"%s\", got \"%s\"\n", i + 1, tests[i].desc, expected, ft_result);
+                printf("    " RED "[%d] %s Expected \"%s\", got \"%s\"\n", i + 1, tests[i].desc, expected_dest, ft_result);
             	error++;
             }
             else

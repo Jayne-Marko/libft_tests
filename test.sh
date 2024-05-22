@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Compile the library
-# make re 
+make re 
 
 test_files=$(find . -name 'test_*.c')
 
