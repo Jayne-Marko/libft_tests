@@ -11,5 +11,6 @@ You can run files separately using the command like:
 
 `cc tests/test_ft_strlcat.c ft_strlcat.c`
 
-! You need to have *Makefile* to run test.sh
-!! You need to have file *libft.h* with function prototypes to run separate tests.
+**!** You need to have **Makefile** to run test.sh
+
+**!!** You need to have file **libft.h** with function prototypes to run separate tests.
