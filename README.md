@@ -12,7 +12,7 @@ In terminal run a command
 
 `alias test="./tests/test.sh"`
 
-and bases on system run this:
+and based on system run this:
 
 `source ~/.zshrc`
 
