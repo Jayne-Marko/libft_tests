@@ -13,18 +13,18 @@ int run_tests(t_test *tests, int count);
 int main(void)
 {
     t_test tests[] = {
-    // {
-    //     .desc = "ft_strlcat - append to empty dest",
-	// 	.dest = "",
-    //     .src = "test",
-    //     .dstsize = 50
-    // },
-    // {
-    //     .desc = "ft_strlcat - append to dest with space left",
-    //     .dest = "original",
-    //     .src = " appended",
-    //     .dstsize = 50
-    // },
+    {
+        .desc = "ft_strlcat - append to empty dest",
+		.dest = "",
+        .src = "test",
+        .dstsize = 50
+    },
+    {
+        .desc = "ft_strlcat - append to dest with space left",
+        .dest = "original",
+        .src = " appended",
+        .dstsize = 50
+    },
 	{
 		.desc = "ft_strlcat - append to dest with no space left",
         .dest = "original",
