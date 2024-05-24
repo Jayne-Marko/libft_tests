@@ -1,7 +1,5 @@
 #include "../libft.h"
 #include "constants.h"
-#include <stdio.h>
-#include <string.h> 
 
 typedef struct s_test {
     char *desc;
