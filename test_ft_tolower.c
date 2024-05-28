@@ -1,4 +1,3 @@
-#include <ctype.h>
 #include "../libft.h"
 #include "constants.h"
 
