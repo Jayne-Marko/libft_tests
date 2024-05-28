@@ -21,9 +21,9 @@ int main(void)
         {.desc = "ft_bzero(buffer, 1)", .buffer = "Hello, World!", .n = 1, .expected = "\0ello, World!"},
         {.desc = "ft_bzero(buffer, 7)", .buffer = "Hello", .n = 7, .expected = "\0\0\0\0\0\0\0"}
     };
-        int count = sizeof(tests) / sizeof(tests[0]);
-
-        return (run_tests(tests, count));
+    
+	int count = sizeof(tests) / sizeof(tests[0]);
+    return (run_tests(tests, count));
 }
 
 int run_tests(t_test *tests, int count)

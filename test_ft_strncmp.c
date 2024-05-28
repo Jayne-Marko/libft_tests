@@ -24,8 +24,8 @@ int run_tests(t_test *tests, int count);
 int main(void)
 {
     t_test tests[] = {
-        // {.desc = "Both strings are empty", .s1 = "", .s2 = "", .n = 0},
-        // {.desc = "Both strings are identical", .s1 = "hello", .s2 = "hello", .n = 5},
+        {.desc = "Both strings are empty", .s1 = "", .s2 = "", .n = 0},
+        {.desc = "Both strings are identical", .s1 = "hello", .s2 = "hello", .n = 5},
         {.desc = "First string is shorter than second", .s1 = "hello", .s2 = "hello world", .n = 5},
         {.desc = "First string is longer than second", .s1 = "hello world", .s2 = "hello", .n = 5},
         {.desc = "Strings are different, but equal up to n characters", .s1 = "hello", .s2 = "hallo", .n = 3},
