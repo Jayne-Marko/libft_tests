@@ -5,7 +5,16 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
+# include <stdint.h>
+# include <malloc.h>
 
+# ifdef __unix__
+#  include <malloc.h>
+# endif
+# ifdef __APPLE__
+#  include <stdlib.h>
+#  include <malloc/malloc.h>
+# endif
 
 #define GREEN "\033[38;5;84m"
 #define RED "\033[38;5;197m"

@@ -41,6 +41,8 @@ int main(void)
 		{.desc = "Overflow above INT_MAX", .input = "2147483648"
 		},
 		{.desc = "Underflow below INT_MIN", .input = "-2147483649"
+		},
+		{.desc = "Double ++", .input = "++1"
 		}
 	};
 	

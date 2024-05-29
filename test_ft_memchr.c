@@ -11,7 +11,8 @@ typedef struct {
 int run_tests(t_test *tests, int count);
 
 int main(void) {
-    t_test tests[] = {
+    char inta[] = {0, 1, 2 ,3 ,4 ,5};
+	t_test tests[] = {
         {.desc = "Search 'o' in 'Hello World'", .s = "Hello World", .c = 'o', .n = 11},
         {.desc = "Search 'l' in 'Hello World'", .s = "Hello World", .c = 'l', .n = 11},
         {.desc = "Search 'x' in 'Hello World'", .s = "Hello World", .c = 'x', .n = 11},
@@ -20,6 +21,7 @@ int main(void) {
         {.desc = "Search 'x' in 'Hello World' with limit", .s = "Hello World", .c = 'x', .n = 5},
         {.desc = "Search 'H' in 'Hello World'", .s = "Hello World", .c = 'H', .n = 11},
         {.desc = "Search 'H' in 'Hello World' with limit", .s = "Hello World", .c = 'H', .n = 5},
+		{.desc = "Digit array", .s = inta, .c = 2+256, .n = 3}
     };
 
     int count = sizeof(tests) / sizeof(tests[0]);
